@@ -1,0 +1,30 @@
+.center-vertical {
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.form-control-user {
+  border: 1px solid #e74a3b !important;
+}
+
+.form-control:focus {
+  border-color: #e74a3b;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.has-error .form-control:focus {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.bg-login-image {
+  background: url(https://i.pinimg.com/originals/94/09/7e/94097e458fbb22184941be57aaab2c8f.png)
+    no-repeat center center fixed !important;
+  /* background-position: center;
+  background-size: cover; */
+  /* background: url('img.png') no-repeat;  */
+  background-size: 100%;
+}
