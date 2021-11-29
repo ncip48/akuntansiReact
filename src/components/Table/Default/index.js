@@ -32,6 +32,16 @@ const customStyles = {
       },
     },
   },
+  header: {
+    style: {
+      padding: 0,
+    },
+  },
+  subHeader: {
+    style: {
+      padding: 0,
+    },
+  },
   pagination: {
     style: {
       border: "none",
@@ -54,7 +64,7 @@ const FilterComponent = ({
   onAdd,
 }) => (
   <>
-    <div className="col-12 d-flex">
+    <div className="col-12 d-flex px-0">
       <div className="input-group mb-0 justify-content-end">
         <div className="col-sm-12 col-md-5 col-xl-5 d-flex px-0">
           <div className="input-group">
@@ -108,24 +118,24 @@ const FilterComponent = ({
         type="button"
         onClick={onRefresh}
       >
-        <i className="fa fa-sync-alt mr-2" />
-        Refresh
+        <i className="fa fa-sync-alt" />
+        <div className="d-none d-sm-block ml-2">Refresh</div>
       </button>
       <button
         className="btn btn-info ml-2 btn-sm px-2 d-flex align-items-center"
         type="button"
         onClick={onSave}
       >
-        <i className="fa fa-cloud-download-alt mr-2" />
-        Simpan
+        <i className="fa fa-cloud-download-alt" />
+        <div className="d-none d-sm-block ml-2">Simpan</div>
       </button>
       <button
         className="btn btn-primary ml-2 btn-sm px-2 d-flex align-items-center"
         type="button"
         onClick={onAdd}
       >
-        <i className="fa fa-plus-circle mr-2" />
-        Tambah
+        <i className="fa fa-plus-circle" />
+        <div className="d-none d-sm-block ml-2">Tambah</div>
       </button>
     </div>
   </>
@@ -154,14 +164,14 @@ function TableDefault({
       cell: (row) => (
         <div>
           <div
-            className="badge badge-success py-1 px-2"
+            className="badge badge-success py-1 px-2 mr-1"
             onClick={() => onEdit(row)}
             style={{ cursor: "pointer" }}
           >
             <i className="fa fa-edit" /> Edit
           </div>
           <div
-            className="badge badge-danger py-1 px-2 ml-1"
+            className="badge badge-danger py-1 px-2 mr-1"
             onClick={() => onDelete(row)}
             style={{ cursor: "pointer" }}
           >
