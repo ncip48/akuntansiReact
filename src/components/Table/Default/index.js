@@ -35,6 +35,7 @@ const customStyles = {
   header: {
     style: {
       padding: 0,
+      minHeight: 0,
     },
   },
   subHeader: {
